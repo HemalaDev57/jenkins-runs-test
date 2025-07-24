@@ -1,5 +1,6 @@
 name: CI Pipeline
 on: 
+  push:
   workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *'  # every 30 minutes
