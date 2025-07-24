@@ -1,32 +1,33 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('H * * * *') // Every 1hr
+    }
+
     stages {
+        stage('Hourly Task') {
+            steps {
+                echo "Running hourly job at: ${new Date()}"
+                sleep 20
+            }
+        }
         stage('Build') {
             steps {
-                echo 'Building...'
-                sleep 5
+                echo 'Building..' 
+                sleep 10
             }
         }
-
         stage('Test') {
             steps {
-                script {
-                    echo 'Running tests...'
-                    sleep 5
-
-                    // Mark this stage as UNSTABLE and stop further stages
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
-                        error('Tests failed. Marking build as UNSTABLE and stopping pipeline.')
-                    }
-                }
+                echo 'Testing..'
+                sleep 5
             }
         }
-
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
-                sleep 5
+                echo 'Deploying....'
+                sleep 15
             }
         }
     }
