@@ -3,8 +3,7 @@ name: Pull Request Workflow
 
 on:
   pull_request:
-    branches:
-      - master  # or your target branch (e.g., 'develop')
+    types: [opened, reopened, synchronize]
 
 jobs:
   build:
