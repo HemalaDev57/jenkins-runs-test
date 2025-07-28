@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'  # every 30 minutes
+    - cron: '0 */2 * * *'  # at minute 0, every 2nd hour
 jobs:
   build:
     runs-on: ubuntu-latest
