@@ -1,8 +1,6 @@
 name: CI Pipeline
 on: 
   push:
-  pull_request:
-    types: [opened, reopened, synchronize]
   workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *'  # every 30 minutes
