@@ -2,8 +2,8 @@ name: CI Pipeline
 on: 
   push:
   workflow_dispatch:
-  schedule:
-    - cron: '0 */2 * * *'  # at minute 0, every 2nd hour
+  # schedule:
+  #   - cron: '0 */2 * * *'  # at minute 0, every 2nd hour
 jobs:
   build:
     runs-on: ubuntu-latest
