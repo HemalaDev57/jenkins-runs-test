@@ -9,15 +9,13 @@ pipeline {
                         stage('Compile') {
                             steps {
                                 echo 'Compiling...'
-                                sh 'echo "Compiling source code..."'
-                                sleep 2
+                                sleep 5
                             }
                         }
                         stage('Package') {
                             steps {
                                 echo 'Packaging...'
-                                sh 'echo "Creating package..." && mkdir -p build && touch build/app.jar'
-                                sleep 2
+                                sleep 5
                             }
                         }
                     }
@@ -27,15 +25,13 @@ pipeline {
                         stage('Unit Tests') {
                             steps {
                                 echo 'Running Unit Tests...'
-                                sh 'echo "Running unit tests..." && sleep 1'
-                                sleep 2
+                                sleep 5
                             }
                         }
                         stage('Integration Tests') {
                             steps {
                                 echo 'Running Integration Tests...'
-                                sh 'echo "Running integration tests..." && sleep 1'
-                                sleep 2
+                                sleep 5
                             }
                         }
                     }
@@ -46,4 +42,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sh 'echo "Deploying to test environment..." && mkdir -p deploy && touch deploy/dep
+                sleep 5
+            }
+        }
+    }
+}
