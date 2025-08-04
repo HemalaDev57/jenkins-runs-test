@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('H * * * *') // Every 1hr
-    }
-
     stages {
         stage('Hourly Task') {
             steps {
