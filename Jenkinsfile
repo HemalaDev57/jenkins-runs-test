@@ -9,13 +9,13 @@ pipeline {
                         stage('Compile') {
                             steps {
                                 echo 'Compiling...'
-                                sleep 5
+                                sleep 10
                             }
                         }
                         stage('Package') {
                             steps {
                                 echo 'Packaging...'
-                                sleep 5
+                                sleep 10
                             }
                         }
                     }
@@ -25,13 +25,13 @@ pipeline {
                         stage('Unit Tests') {
                             steps {
                                 echo 'Running Unit Tests...'
-                                sleep 5
+                                sleep 10
                             }
                         }
                         stage('Integration Tests') {
                             steps {
                                 echo 'Running Integration Tests...'
-                                sleep 5
+                                sleep 10
                             }
                         }
                     }
@@ -42,7 +42,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sleep 5
+                sleep 10
             }
         }
     }
