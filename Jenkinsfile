@@ -5,20 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sleep 2
+                sleep 20
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Fail the build
-                error('Tests failed!')
+                sleep 10
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sleep 2
+                sleep 5
+                 // Fail the build
+                error('Tests failed!')
             }
         }
     }
