@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage('Hourly Task') {
+        stage('Checkout') {
             steps {
-                echo "Running hourly job at: ${new Date()}"
                 sleep 20
             }
         }
