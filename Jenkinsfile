@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests...'
-                    sleep 15
+                    sleep 10
 
                     
                 }
