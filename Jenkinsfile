@@ -27,7 +27,7 @@ pipeline {
                     name: "eng-artifact",
                     version: "1.0.0",
                     type: "docker",
-                    url: "http://localhost:1111",
+                    url: "http://test:1111",
                     digest: "6f637064707039346163663237383938",
                     label: "prod"
                 )
